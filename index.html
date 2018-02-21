@@ -1,30 +1,46 @@
- <!DOCTYPE html>
- <html>
- <head>
- 	<title>BMI Calculator</title>
- 	<meta charset="utf-8">	
- 	<link rel="stylesheet" type="text/css" href="css/style.css">
- </head>
- <body>   
- 	
- 	<div class="human">
- 		<div class="height"><div class="heightNumber"><input type="number" name="height" min="100" max="200" value="170" > cm</div></div>
- 		<div class="head"></div>
- 		<div class="shoulder"></div>
- 		<div class="handLeft"></div>
- 		<div class="handRight"></div>
- 		<div class="body"></div> 
- 		<div class="legLeft"></div>
- 		<div class="legRight"></div>
- 		<div class="weightScale"><input type="number" name="weight" min="20" max="200" value="50"> Kg<button id="button"> Calculate! </button></div>
- 		<div class="BMI"></div>
- 	</div>
-		<h1> Calculate____Your BMI</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+<body> 
+<div class="container">
+
+	<div class="col" id="underweight">
+		<div class="head"></div>
+		<div class="body"></div>
+		<div class="text">Underweight</div>
+	</div>
+	<div class="col" id="healthy">
+		<div class="head"></div>
+		<div class="body"></div>
+		<div class="text">Healthy</div>
+	</div>
+	<div class="col" id="overweight"> 
+		<div class="head"></div>
+		<div class="body"></div>
+		<div class="text">Overweight</div>
+	</div>
+	<div class="col" id="obese"> 
+		<div class="head"></div>
+		<div class="body"></div>
+		<div class="text">Obese</div>
+	</div>
+
+</div>
 
 
-<div class="msg">BMI Calculator By <a href="https://github.com/dog1133299" target="_blank">Ruby</a></div>
+<div class="frame">
+	<h1>BMI = <span id="bmi">00.0</span></h1>
+	<h2>Height:<input type="number" name="height" id="height" min="50" max="300" value="150">cm</h2>
+	<h2>Weight:<input type="number" name="weight" id="weight" min="10" max="200" value="50">kg</h2>
+	<button id="button">Calculate</button>
+</div>
 
-<script type="text/javascript" src="js/game.js"></script>
- 
- </body>
- </html>
+
+
+	<script type="text/javascript" src="js/game.js"></script>
+</body>
+</html>

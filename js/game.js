@@ -1,41 +1,31 @@
  function s(e) {
  	return document.querySelector(e);
  }
-
-
- var head=s(".head");
- var body=s(".body");
- var handL=s(".handLeft");
- var handR=s(".handRight");
- var legL=s(".legLeft");
- var legR=s(".legRight");
- var text=s(".BMI");
- var height=s(".heightNumber>input");
- var weight=s(".weightScale>input");
+ 
+ var height=s("#height");
+ var weight=s("#weight");
  var button=s("#button");
-
- head.onclick=function(){
- 	head.classList.toggle("girl");
- 	body.classList.toggle("girl");
- 	handL.classList.toggle("girl");
- 	handR.classList.toggle("girl");
- 	legL.classList.toggle("girl");
- 	legR.classList.toggle("girl"); 
-
- };
- button.onclick=function(){
-
+ var bmi=s("#bmi");
+var  underweight=s('#underweight');
+var healthy=s('#healthy');
+var obese=s('#obese');
+var overweight=s('#overweight');
+  button.onclick=function(){
+obese.classList.remove("select");
+overweight.classList.remove("select");
+healthy.classList.remove("select");
+underweight.classList.remove("select");
  	 	if (height.value!=0&&weight.value!=0) {
- 	 		var bmi=weight.value/height.value/height.value*10000;
- 	 		if (bmi>=30) {
- 	 		text.innerHTML=bmi.toFixed(2)+"<br>Obesity";
- 	 		}else if(bmi>=25){
- 	 		text.innerHTML=bmi.toFixed(2)+"<br>Overweight";
- 	 		}else if(bmi>=18.5){
- 	 		text.innerHTML=bmi.toFixed(2)+"<br>Normal weight ";
- 	 		}else{text.innerHTML=bmi.toFixed(2)+"<br>Underweight";}
+ 	 		var i=weight.value/height.value/height.value*10000;
+ 	 		if (i>=30) {
+ 	 		bmi.innerHTML=i.toFixed(2);obese.classList.add("select");
+ 	 		}else if(i>=25){
+ 	 		bmi.innerHTML=i.toFixed(2);overweight.classList.add("select");
+ 	 		}else if(i>=18.5){
+ 	 		bmi.innerHTML=i.toFixed(2);healthy.classList.add("select");
+ 	 		}else{bmi.innerHTML=i.toFixed(2);underweight.classList.add("select");}
  
  	 	}else{
- 	 		text.innerHTML="Please enter Number!"
+ 	 		bmi.innerHTML="Please enter Number!"
  	 	}
  };

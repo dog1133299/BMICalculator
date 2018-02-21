@@ -1,140 +1,78 @@
- 
- *{
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Square721 BT','Montserrat', sans-serif;
- } 
-body{background-color: rgb(255, 194, 102); } 
-input{
-  outline: none;
-  text-decoration: none;
-  width: 10vw;
-  height: 2vw; 
-  border: none;
-  border-radius: 5%;
-}
-h1{
+ *{margin: 0 auto;padding: 0;font-family: 'Montserrat', sans-serif;}
+ body{
 
-  color: rgb(102, 51, 0);
-  text-align: center;
-  font-size: 8vw;
-  margin-top: 50vh; 
-
-}
-button{
-  outline: none;
-  margin-top: 0.5vw;
-  width: 10vw;
-  height: 3vw;
-  background-color: white;
-  font-size: 2vw;
-  border-radius: 10%;
-  cursor: pointer;
-}
-button:hover{
-  background-color: black;
-  color: white;
-}
-button:active{
-  background-color: white;
-  color: black;
-}
-  .human{
-    width: 20vw;
-    height: 30vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -15vw 0 0 -10vw; 
-
-  }
-  .human>.head{
-    width: 10vw;
-    height: 10vw;
-    background-color: rgb(77, 210, 255);
-    border-radius: 50% 50% 40% 40%;
-    cursor:pointer;
-  }
-  .human>.body{
-    width: 9vw;
-    height: 10vw;
-    background-color: rgb(77, 210, 255);
-    border-radius: 20% 20% 30% 30%;
-  }
-  .human>.legLeft,.human>.legRight{
-    width: 3vw;
-    height: 5vw;
-    margin-right: 0.5vw; 
-    background-color: rgb(77, 210, 255);
-    border-radius: 30%;
-    display: inline-block;
-    -webkit-transform: translate(6.5vw,0);
-        -ms-transform: translate(6.5vw,0);
-            transform: translate(6.5vw,0);
-
-  }
-  .human>.handLeft,.human>.handRight{
-    width: 3vw;
-    height: 8vw;
-    background-color: rgb(77, 210, 255);
-    border-radius: 40%;
-    position: absolute;
-  }
-
-  .human>.handLeft{-webkit-transform: translate(4vw,0) rotateZ(20deg);-ms-transform: translate(4vw,0) rotate(20deg);transform: translate(4vw,0) rotateZ(20deg);}
-  .human>.handRight{ -webkit-transform: translate(13vw,0) rotateZ(-20deg); -ms-transform: translate(13vw,0) rotate(-20deg); transform: translate(13vw,0) rotateZ(-20deg);}
-  
-  .human>.weightScale{ 
-    width: 20vw;
-    height: 7vw; 
-    background-color: grey;
-    text-align: center; 
-    border-radius: 10%;
-     font-size:  2vw;
-
-   }
-    .human>.height{ 
-    width: 3vw;
-    height: 32vw; 
-    background-color: rgba(100,100,100,0.5);
-    position: absolute;
-    text-align: center; 
-    z-index: -1
-   }
-   .human>.weightScale>input{ 
-    text-align: center; 
-    margin-top: 1vw;
-    font-size:  2vw;
-   }
-  .heightNumber{ 
-    width: 15vw;
-    font-size: 2vw;
-    -webkit-transform: translate(-10vw,10vw);
-        -ms-transform: translate(-10vw,10vw);
-            transform: translate(-10vw,10vw);
-   }
-   .heightNumber>input{
-    text-align: center;
-     font-size: 2vw;
-
-   }
-.BMI{
-  text-align: center;
-     font-size: 2vw;
-  }
-   .girl{
-    background-color: rgb(255, 102, 153) !important;
-   }
- .msg{
-  width: 100%;
-  position: absolute;
-  bottom: 0; 
-  text-align: center;
-  font-family: 'Square721 BT','Montserrat', sans-serif;
-  font-size: 20px;
+	font-weight: 400;
+	background-image: linear-gradient(rgba(0,0,0,0.5) 1px, transparent 0),linear-gradient(90deg ,rgba(0,0,0,0.5) 1px, transparent 0);
+    background-size: 25px 25px;
  }
- .msg>a{
-  text-decoration: none; 
-  color: darkgray;
-  
- }   
+ input{
+ 	width: 100px;
+ 	height:30px;
+ 	font-size: 30px;
+ 	outline: none;
+ 	border: 2px solid lightblue;
+ 	margin:0px 15px 15px 15px ;
+
+ 	text-align: center;
+ }
+button{
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	outline: none;
+	text-decoration: none;
+	background-color:rgb(200,100,50);
+	color: white;
+	font-size: 30px;
+	width: 150px;
+	height: 60px;
+	line-height: 60px;
+	border: none;
+	transition: width 1s;
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-o-transition: width 1s;
+	cursor: pointer;
+
+}
+button:hover {
+	width: 250px;
+	background-color:rgb(180,80,30);
+
+}
+.container,.frame{
+	text-align: center; 
+	margin-top: 20px;
+}
+.col{
+	width: 15vw;
+	height: 50vh;
+	margin: 1vw;
+	padding: 2vw; 
+	display: inline-block;
+}
+.select{
+	background-color: pink;
+}
+.head{
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%; 
+}
+.body{height:15vw; }
+.text{width: 15vw;height: 3vw;font-size: 3vw;}
+#underweight>.head{background-color: lightblue;}
+#healthy>.head{background-color: lightgreen;}
+#overweight>.head{background-color: orange;}
+#obese>.head{background-color: red;}
+ 
+#underweight>.body{background-color: lightblue;width: 5vw;border-radius:40% 40% 10% 10%; } 
+#healthy>.body{background-color: lightgreen;width: 8vw;border-radius:50% 50% 10% 10%; }
+#overweight>.body{background-color: orange;width: 10vw;border-radius:50% 50% 20% 20%; }
+#obese>.body{background-color: red;width: 12vw;border-radius:50% 50% 30% 30%; }
+
+#underweight:hover{background-color:white;}
+#healthy:hover{background-color:white;}
+#overweight:hover{background-color:white;}
+#obese:hover{background-color:white;}
+ 
